@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog", "Autofac.Extras.NLog\Autofac.Extras.NLog.csproj", "{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}"
 EndProject
@@ -13,6 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{691806
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoFac.Extras.NLog.NetCore20", "AutoFac.Extras.NLog.NetCore20\AutoFac.Extras.NLog.NetCore20.csproj", "{412C886B-5CEF-498B-B0DC-7A7806929CD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Core", ".NET Core", "{F6B6902E-7E44-4118-A21F-0B502086D824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog.NetCore20.Tests", "Autofac.Extras.NLog.NetCore20.Tests\Autofac.Extras.NLog.NetCore20.Tests.csproj", "{A7821D02-4379-4BC8-AF57-CC2199711489}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,8 +34,23 @@ Global
 		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{412C886B-5CEF-498B-B0DC-7A7806929CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{412C886B-5CEF-498B-B0DC-7A7806929CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{412C886B-5CEF-498B-B0DC-7A7806929CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{412C886B-5CEF-498B-B0DC-7A7806929CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7821D02-4379-4BC8-AF57-CC2199711489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7821D02-4379-4BC8-AF57-CC2199711489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7821D02-4379-4BC8-AF57-CC2199711489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7821D02-4379-4BC8-AF57-CC2199711489}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{412C886B-5CEF-498B-B0DC-7A7806929CD5} = {F6B6902E-7E44-4118-A21F-0B502086D824}
+		{A7821D02-4379-4BC8-AF57-CC2199711489} = {F6B6902E-7E44-4118-A21F-0B502086D824}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F340E7D-4C72-4360-8B55-23A33F0F7F06}
 	EndGlobalSection
 EndGlobal
