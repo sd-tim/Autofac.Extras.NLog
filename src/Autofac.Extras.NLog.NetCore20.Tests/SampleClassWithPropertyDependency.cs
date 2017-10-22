@@ -1,7 +1,5 @@
-﻿namespace Autofac.Extras.NLog.NetCore20.Tests
+﻿namespace AutoFac.NLogAdapter.NetCore20.Tests
 {
-   using AutoFac.Extras.NLog.NetCore20;
-
    public class SampleClassWithPropertyDependency: ISampleClass
    {
       public ILogger Logger { get; set; }

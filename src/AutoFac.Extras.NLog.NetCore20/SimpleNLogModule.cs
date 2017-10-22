@@ -1,7 +1,7 @@
-﻿namespace AutoFac.Extras.NLog.NetCore20
+﻿namespace AutoFac.NLogAdapter.NetCore20
 {
    using Autofac;
-   using global::NLog;
+   using NLog;
 
    public class SimpleNLogModule: Module
    {
