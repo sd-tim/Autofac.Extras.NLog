@@ -34,7 +34,7 @@
       }
 
       [ Fact ]
-      public void Should_specify_the_calling_type()
+      public void Should_specify_the_correct_calling_type_and_method_names()
       {
          var logger = container.ResolveNamed<ISampleClass>( "property" ).GetLogger();
          logger.Should().NotBeNull();
@@ -47,12 +47,12 @@
          var logLinePattern = new Regex( @"^(?<date>\d{4}-\d{2}-\d{2})\s(?<time>[\d:.]{13})\s(?<level>INFO|ERROR|WARNING)\s(?<callsite>[A-za-z0-9.]+)\s(?<msg>.*)$" );
 
          Match match = logLinePattern.Match( lastLineOfLogs );
-         match.Success.Should().BeTrue( because: "Should match the regex" );
+         match.Success.Should().BeTrue( because: "layout should match the regex" );
 
          output.WriteLine( $"Callsite contains: {match.Groups[ "callsite" ].Value}" );
 
-         match.Groups[ "callsite" ].Value.Should().Be( $"{GetType().FullName}.{nameof(Should_specify_the_calling_type)}",
-                                                       because: "should use the calling method context." );
+         match.Groups[ "callsite" ].Value.Should().Be( $"{GetType().FullName}.{nameof(Should_specify_the_correct_calling_type_and_method_names)}",
+                                                       because: "should use the actual calling method context." );
       }
    }
 }
