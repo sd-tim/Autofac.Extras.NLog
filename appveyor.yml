@@ -1,16 +1,21 @@
-configuration: Release
+version: 2.0.{build}
+
 branches:
   only:
-    - develop
+  - develop
+
+image: Visual Studio 2017
+
+configuration: Release
 
 before_build:
   - dotnet restore src/Autofac.Extras.NLog.sln
   - nuget restore src/Autofac.Extras.NLog.sln
 
 build:
-  project: src/Autofac.Extras.NLog.sln      
-  verbosity: minimal
-  
-test:
+  project: src/Autofac.Extras.NLog.sln
+  verbosity: normal
+
+Test:
   assemblies:
     - '**\*.Tests.dll'
