@@ -1,13 +1,9 @@
-﻿// ReSharper disable RedundantUsingDirective
-
-// ReSharper restore RedundantUsingDirective
-
-namespace AutoFac.Extras.NLog.NetCore20
+﻿namespace AutoFac.NLogAdapter.NetCore20
 {
    using System.Linq;
    using System.Reflection;
    using Autofac.Core;
-   using global::NLog;
+   using NLog;
    using Module = Autofac.Module;
 
    public class NLogModule: Module

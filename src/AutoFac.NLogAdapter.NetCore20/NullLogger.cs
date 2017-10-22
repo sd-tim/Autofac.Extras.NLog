@@ -1,7 +1,7 @@
-﻿namespace AutoFac.Extras.NLog.NetCore20
+﻿namespace AutoFac.NLogAdapter.NetCore20
 {
    using System;
-   using global::NLog;
+   using NLog;
 
    public class NullLogger: ILogger
    {
