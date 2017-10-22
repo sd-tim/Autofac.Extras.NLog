@@ -15,7 +15,3 @@ before_build:
 build:
   project: src/Autofac.Extras.NLog.sln
   verbosity: normal
-
-test:
-  assemblies:
-    - '**\*.Tests.dll'
