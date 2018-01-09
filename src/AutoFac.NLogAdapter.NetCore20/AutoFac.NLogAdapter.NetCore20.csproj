@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>AutoFac.NLogAdapter.NetCore20</AssemblyName>
+    <RootNamespace>AutoFac.NLogAdapter.NetCore20</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

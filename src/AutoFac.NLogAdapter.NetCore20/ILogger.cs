@@ -1,11 +1,9 @@
-namespace AutoFac.Extras.NLog.NetCore20
+namespace AutoFac.NLogAdapter.NetCore20
 {
    using System;
    using System.ComponentModel;
-   using global::NLog;
+   using NLog;
 
-   //INFO: ADAPTED FROM NLOG:INTERFACE Project https://github.com/uhaciogullari/NLog.Interface
-   //TODO: UPDATE TO USE NLOG:INTERFACE Package (Fork and solve nlog.interface issues)
    /// <summary>
    ///    Provides logging interface and utility functions.
    /// </summary>
