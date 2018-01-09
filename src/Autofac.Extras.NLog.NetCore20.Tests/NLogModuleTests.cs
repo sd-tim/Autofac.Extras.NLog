@@ -1,8 +1,9 @@
 ﻿namespace Autofac.Extras.NLog.NetCore20.Tests
 {
    using AutoFac.Extras.NLog.NetCore20;
-   using Xunit;
+   using NUnit.Framework;
 
+   [ TestFixture ]
    public class NLogModuleTests
    {
       private IContainer container;
@@ -21,7 +22,7 @@
          container = containerBuilder.Build();
       }
 
-      [ Fact ]
+      [ Test ]
       public void Inject_logger_into_constructor_test()
       {
          ISampleClass sampleClass = container.ResolveNamed<ISampleClass>( "constructor" );
@@ -29,7 +30,7 @@
          Assert.NotNull( sampleClass.GetLogger() );
       }
 
-      [ Fact ]
+      [ Test ]
       public void Inject_logger_into_property_test()
       {
          ISampleClass sampleClass = container.ResolveNamed<ISampleClass>( "property" );
