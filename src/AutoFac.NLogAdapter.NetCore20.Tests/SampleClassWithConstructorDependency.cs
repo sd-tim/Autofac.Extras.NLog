@@ -2,9 +2,9 @@
 {
    public class SampleClassWithConstructorDependency: ISampleClass
    {
-      private readonly ILogger logger;
+      private readonly NLog.ILogger logger;
 
-      public SampleClassWithConstructorDependency( ILogger logger )
+      public SampleClassWithConstructorDependency( NLog.ILogger logger )
       {
          this.logger = logger;
       }
@@ -14,7 +14,7 @@
          logger.Debug( message );
       }
 
-      public ILogger GetLogger()
+      public NLog.ILogger GetLogger()
       {
          return logger;
       }

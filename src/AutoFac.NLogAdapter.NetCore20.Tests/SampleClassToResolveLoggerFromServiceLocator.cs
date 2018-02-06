@@ -4,11 +4,11 @@
 
    public class SampleClassToResolveLoggerFromServiceLocator: ISampleClass
    {
-      private readonly ILogger logger;
+      private readonly NLog.ILogger logger;
 
       public SampleClassToResolveLoggerFromServiceLocator( ILifetimeScope serviceLocator )
       {
-         logger = serviceLocator.Resolve<ILogger>();
+         logger = serviceLocator.Resolve<NLog.ILogger>();
       }
 
       public void SampleMessage( string message )
@@ -16,7 +16,7 @@
          logger.Debug( message );
       }
 
-      public ILogger GetLogger()
+      public NLog.ILogger GetLogger()
       {
          return logger;
       }

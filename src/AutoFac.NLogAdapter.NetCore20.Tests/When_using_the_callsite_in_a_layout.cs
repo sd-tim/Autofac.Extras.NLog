@@ -48,7 +48,7 @@
       public void Should_work_for_level_message_and_exception()
       {
          var exception = new Exception( TestCode );
-         Logger.Log( LogLevel.Fatal, TestCode, exception );
+         Logger.Log( LogLevel.Fatal, exception, TestCode );
 
          VerifyLogMessage( TestCode );
          VerifyException( exception );
@@ -76,16 +76,6 @@
          Logger.Log<string>( LogLevel.Info, CultureInfo.InstalledUICulture, "Testcode: {0}", TestCode );
 
          VerifyLogMessage( TestCode );
-      }
-
-      [ Test ]
-      public void Should_work_for_level_format_provider_message_and_generic_argument_when_argument_is_an_exception()
-      {
-         var exception = new Exception( "Failed!" );
-         Logger.Log<Exception>( LogLevel.Fatal, CultureInfo.InstalledUICulture, TestCode, exception );
-
-         VerifyLogMessage( TestCode );
-         VerifyException( exception );
       }
 
       [ Test ]

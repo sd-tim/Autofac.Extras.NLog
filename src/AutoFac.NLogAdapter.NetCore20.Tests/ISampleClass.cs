@@ -3,6 +3,6 @@
    public interface ISampleClass
    {
       void SampleMessage( string message );
-      ILogger GetLogger();
+      NLog.ILogger GetLogger();
    }
 }

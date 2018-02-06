@@ -38,7 +38,7 @@
          DeleteLogFile();
       }
 
-      public ILogger Logger
+      public NLog.ILogger Logger
       {
          get
          {

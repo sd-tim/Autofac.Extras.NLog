@@ -7,7 +7,7 @@
    {
       protected override void Load( ContainerBuilder builder )
       {
-         builder.Register( context => new LoggerAdapter( LogManager.GetCurrentClassLogger() ) )
+         builder.Register( context => LogManager.GetCurrentClassLogger() )
                 .As<ILogger>()
                 .SingleInstance();
       }

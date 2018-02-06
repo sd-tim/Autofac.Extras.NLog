@@ -2,14 +2,14 @@
 {
    public class SampleClassWithPropertyDependency: ISampleClass
    {
-      public ILogger Logger { get; set; }
+      public NLog.ILogger Logger { get; set; }
 
       public void SampleMessage( string message )
       {
          Logger.Debug( message );
       }
 
-      public ILogger GetLogger()
+      public NLog.ILogger GetLogger()
       {
          return Logger;
       }
